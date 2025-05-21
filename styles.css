@@ -1,0 +1,120 @@
+/* General Body Styles */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f8f9fa;
+    color: #333;
+}
+
+/* Navigation Bar Styles */
+nav {
+    background-color: #343a40;
+    padding: 15px;
+}
+
+nav ul {
+    list-style-type: none;
+    padding: 0;
+    display: flex;
+    justify-content: space-around;
+}
+
+nav ul li {
+    margin: 0 15px;
+}
+
+nav a {
+    color: #ffffff;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+nav a:hover {
+    text-decoration: underline;
+}
+
+/* Section Styles */
+section {
+    padding: 20px;
+    margin: 20px;
+    border-radius: 8px;
+    background-color: #ffffff;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Heading Styles */
+h1, h2 {
+    color: #007bff;
+}
+
+/* Button Styles */
+button {
+    background-color: #007bff;
+    color: white;
+    border: none;
+    padding: 10px 15px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+button:hover {
+    background-color: #0056b3;
+}
+
+/* Search Input Styles */
+#search {
+    width: 100%;
+    padding: 10px;
+    margin-top: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+/* Food Items Container */
+.food-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 15px; /* Space between food items */
+}
+
+/* Individual Food Item Styles */
+.food-item {
+    flex: 1 1 calc(20% - 15px); /* Five items per row with space */
+    padding: 15px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    background-color: #f0f0f0;
+    text-align: center;
+    transition: background-color 0.3s;
+}
+
+/* Adjusted Food Item Image Styles */
+.food-item img {
+    width: 100%; /* Set width to fill container */
+    height: 150px; /* Fixed height for uniformity */
+    object-fit: cover; /* Cover to maintain aspect ratio */
+    border-radius: 5px;
+}
+
+.food-item:hover {
+    background-color: #0fd88b; /* Change background on hover */
+}
+
+/* Cart Items Styles */
+#cart-items {
+    list-style-type: none;
+    padding: 0;
+}
+
+#cart-items li {
+    padding: 10px;
+    border-bottom: 1px solid #ccc;
+}
+
+/* Food Count Styles */
+#food-count {
+    margin-top: 15px;
+    font-weight: bold;
+}

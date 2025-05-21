@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login / Sign Up</title>
+    <link rel="stylesheet" href="st.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Login / Sign Up</h1>
+        <div class="form-group">
+            <label for="username">Username:</label>
+            <input type="text" id="username" required>
+            <div class="error-message" id="usernameError"></div>
+        </div>
+        <div class="form-group">
+            <label for="password">Password:</label>
+            <input type="password" id="password" required>
+            <div class="error-message" id="passwordError"></div>
+        </div>
+        <button onclick="login()">Login</button>
+        <button onclick="signup()">Sign Up</button>
+        <div id="message" class="message"></div>
+        <p><a href="index.html">Back to Home</a></p> <!-- Link to go back to the home page -->
+    </div>
+
+    <script>
+        function login() {
+            const username = document.getElementById('username').value;
+            const password = document.getElementById('password').value;
+            const usernameError = document.getElementById('usernameError');
+            const passwordError = document.getElementById('passwordError');
+            let valid = true;
+
+            // Clear previous error messages
+            usernameError.innerText = '';
+            passwordError.innerText = '';
+
+            // Validate username
+            if (!username) {
+                usernameError.innerText = "Username is required.";
+                valid = false;
+            }
+
+            // Validate password
+            if (!password) {
+                passwordError.innerText = "Password is required.";
+                valid = false;
+            }
+
+            if (valid) {
+                // Simulate a successful login
+                localStorage.setItem('username', username); // Store username in local storage
+                alert("Login successful!");
+                window.location.href = "index.html"; // Redirect to home page
+            } else {
+                document.getElementById('message').innerText = "Please fill in all fields.";
+                document.getElementById('message').style.color = "red";
+            }
+        }
+
+        function signup() {
+            const username = document.getElementById('username').value;
+            const password = document.getElementById('password').value;
+            const usernameError = document.getElementById('usernameError');
+            const passwordError = document.getElementById('passwordError');
+            let valid = true;
+
+            // Clear previous error messages
+            usernameError.innerText = '';
+            passwordError.innerText = '';
+
+            // Validate username
+            if (!username) {
+                usernameError.innerText = "Username is required.";
+                valid = false;
+            }
+
+            // Validate password
+            if (!password) {
+                passwordError.innerText = "Password is required.";
+                valid = false;
+            }
+
+            if (valid) {
+                // Simulate a successful signup
+                alert("Sign up successful! You can now log in.");
+            } else {
+                document.getElementById('message').innerText = "Please fill in all fields.";
+                document.getElementById('message').style.color = "red";
+            }
+        }
+    </script>
+</body>
+</html>
